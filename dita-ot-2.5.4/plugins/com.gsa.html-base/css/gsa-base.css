@@ -1,0 +1,73 @@
+/* ====================================================
+ * Base CSS for GSA HTML output
+ * ====================================================
+ */
+ 
+ body 
+ {
+   font-family: 'Times New Roman', serif;
+ }
+ 
+ 
+ ul, ol, sl
+ {
+   list-style: none;
+   display: inline;
+   -webkit-padding-start: 0px;
+   padding-left: 0px;
+ }
+
+ p
+ {
+   text-indent: 1em;
+ }
+ 
+
+
+
+ 
+ li
+ {
+   list-style-type: none;
+   margin-left: 1em;
+   text-indent: 1em;
+ }
+ 
+
+ 
+ 
+
+/* Text Lists  */
+
+p[class *= 'List1']
+{
+     text-indent: .25in;
+}
+
+p[class *= 'List2']
+{
+     text-indent: .5in;
+}
+
+p[class *= 'List3']
+{
+     text-indent: .75in;
+}
+
+p[class *= 'List4']
+{
+     text-indent: 1in;
+}
+
+
+
+
+/* fix for runin */
+li[class*= 'Runin'] > p{
+    margin-top: 0;
+    float:left;
+    margin-bottom: 0px;
+}
+
+
+

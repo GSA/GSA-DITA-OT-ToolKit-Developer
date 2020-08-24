@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="GSA_pdf">
+  <target name="dita2GSA_pdf.init">
+    <property location="${dita.plugin.GSA_pdf.dir}/cfg" name="customization.dir" />
+    <property name="pdf2.i18n.skip" value="true" />
+    <property location="${dita.plugin.GSA_pdf.dir}/xsl/fo/topic2fo_shell_fop.xsl" name="args.xsl.pdf" />
+    <property name="args.chapter.layout" value="BASIC" />
+    <property name="args.bookmark.style" value="COLLAPSED" />
+    <property name="args.fo.include.rellinks" value="none" />
+  </target>
+  <target depends="dita2GSA_pdf.init, dita2pdf2" name="dita2GSA_pdf" />
+</project>

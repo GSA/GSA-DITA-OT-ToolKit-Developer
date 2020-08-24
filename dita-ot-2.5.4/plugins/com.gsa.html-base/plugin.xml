@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="com.gsa.html-base">
+  
+  <require plugin="org.dita.html5"/>
+
+  <transtype name="gsa.html-base" extends="GSAhtml5">
+  </transtype>
+
+
+  <feature extension="dita.conductor.target.relative" file="build.xml"/>
+
+  <feature extension="dita.xsl.html5"
+    value="xsl/gsa-html-overrides.xsl" type="file"
+  />
+  <!-- <template file="build_ciena.html-base_template.xml"/> -->
+  
+</plugin>

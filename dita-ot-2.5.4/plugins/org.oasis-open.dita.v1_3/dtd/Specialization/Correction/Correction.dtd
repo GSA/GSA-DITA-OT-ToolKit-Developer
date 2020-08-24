@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--DTD for CorrectionTitle. Typically invoked by
+      <!DOCTYPE  CorrectionTitle  SYSTEM
+    "D:\DropBoxAll\Dropbox (The Content Era)\Structure\StructureGSA_FAR\xml\DITA_1.2\app\Specialization\Correction\Correction.dtd">
+-->
+
+
+<!--December 21, 2015-->
+
+<!ELEMENT CorrectionTitle 
+                     (CorrectTitle, Correct_Body) >
+<!ATTLIST CorrectionTitle 
+                     id        ID        #IMPLIED
+                     conref    CDATA     #IMPLIED
+                     conrefend  CDATA     #IMPLIED
+                     conaction  (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target)  #IMPLIED
+                     conkeyref  CDATA     #IMPLIED
+                     props     CDATA     #IMPLIED
+                     platform  CDATA     #IMPLIED
+                     product   CDATA     #IMPLIED
+                     audience  CDATA     #IMPLIED
+                     otherprops  CDATA     #IMPLIED
+                     base      CDATA     #IMPLIED
+                     importance  (default|deprecated|high|low|normal|obsolete|optional|recommended|required|urgent|-dita-use-conref-target)  #IMPLIED
+                     rev       CDATA     #IMPLIED
+                     status    (changed|deleted|new|unchanged|-dita-use-conref-target)  #IMPLIED
+                     translate  (no|yes|-dita-use-conref-target)  #IMPLIED
+                     xml:lang  CDATA     #IMPLIED
+                     dir       (lro|ltr|rlo|rtl|-dita-use-conref-target)  #IMPLIED
+                     outputclass  CDATA     #IMPLIED
+                     xmlns:ditaarch  CDATA     "http://dita.oasis-open.org/architecture/2005/"
+                     ditaarch:DITAArchVersion  CDATA     "1.2"
+                     domains   CDATA     "(topic concept) (topic concept glossentry) (topic concept glossgroup) (topic reference) (topic task) (topic hi-d) (topic ut-d) (topic indexing-d) (topic hazard-d) (topic abbrev-d) (topic pr-d) (topic sw-d) (topic ui-d) (topic task strictTaskbody-c)"
+                     xtrc      CDATA     #IMPLIED
+                     xtrf      CDATA     #IMPLIED
+                     class     CDATA     "- topic/topic " >
+
+<!ELEMENT CorrectTitle 
+                     (#PCDATA) >
+<!ATTLIST CorrectTitle 
+                     id        CDATA     #IMPLIED
+                     conref    CDATA     #IMPLIED
+                     conrefend  CDATA     #IMPLIED
+                     conaction  (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target)  #IMPLIED
+                     conkeyref  CDATA     #IMPLIED
+                     translate  (no|yes|-dita-use-conref-target)  #IMPLIED
+                     xml:lang  CDATA     #IMPLIED
+                     dir       (lro|ltr|rlo|rtl|-dita-use-conref-target)  #IMPLIED
+                     base      CDATA     #IMPLIED
+                     outputclass  CDATA     #IMPLIED
+                     xtrc      CDATA     #IMPLIED
+                     xtrf      CDATA     #IMPLIED
+                     class     CDATA     "- topic/title " >
+
+<!ELEMENT Correct_Body 
+                     (CorrectionBody*, CorrectionAddress*,
+                              CorrectionLine*) >
+<!ATTLIST Correct_Body 
+                     id        CDATA     #IMPLIED
+                     conref    CDATA     #IMPLIED
+                     conrefend  CDATA     #IMPLIED
+                     conaction  (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target)  #IMPLIED
+                     conkeyref  CDATA     #IMPLIED
+                     props     CDATA     #IMPLIED
+                     platform  CDATA     #IMPLIED
+                     product   CDATA     #IMPLIED
+                     audience  CDATA     #IMPLIED
+                     otherprops  CDATA     #IMPLIED
+                     base      CDATA     #IMPLIED
+                     importance  (default|deprecated|high|low|normal|obsolete|optional|recommended|required|urgent|-dita-use-conref-target)  #IMPLIED
+                     rev       CDATA     #IMPLIED
+                     status    (changed|deleted|new|unchanged|-dita-use-conref-target)  #IMPLIED
+                     translate  (no|yes|-dita-use-conref-target)  #IMPLIED
+                     xml:lang  CDATA     #IMPLIED
+                     dir       (lro|ltr|rlo|rtl|-dita-use-conref-target)  #IMPLIED
+                     outputclass  CDATA     #IMPLIED
+                     xtrc      CDATA     #IMPLIED
+                     xtrf      CDATA     #IMPLIED
+                     class     CDATA     "- topic/body " >
+
+<!ELEMENT CorrectionBody 
+                     (#PCDATA) >
+<!ATTLIST CorrectionBody 
+                     id        ID        #IMPLIED
+                     conref    CDATA     #IMPLIED
+                     conrefend  CDATA     #IMPLIED
+                     conaction  (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target)  #IMPLIED
+                     conkeyref  CDATA     #IMPLIED
+                     props     CDATA     #IMPLIED
+                     platform  CDATA     #IMPLIED
+                     product   CDATA     #IMPLIED
+                     audience  CDATA     #IMPLIED
+                     otherprops  CDATA     #IMPLIED
+                     base      CDATA     #IMPLIED
+                     importance  (default|deprecated|high|low|normal|obsolete|optional|recommended|required|urgent|-dita-use-conref-target)  #IMPLIED
+                     rev       CDATA     #IMPLIED
+                     status    (changed|deleted|new|unchanged|-dita-use-conref-target)  #IMPLIED
+                     translate  (no|yes|-dita-use-conref-target)  #IMPLIED
+                     xml:lang  CDATA     #IMPLIED
+                     dir       (lro|ltr|rlo|rtl|-dita-use-conref-target)  #IMPLIED
+                     outputclass  CDATA     #IMPLIED
+                     xtrc      CDATA     #IMPLIED
+                     xtrf      CDATA     #IMPLIED
+                     class     CDATA     "- topic/p " >
+
+<!ELEMENT CorrectionAddress 
+                     (#PCDATA) >
+<!ATTLIST CorrectionAddress 
+                     id        ID        #IMPLIED
+                     conref    CDATA     #IMPLIED
+                     conrefend  CDATA     #IMPLIED
+                     conaction  (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target)  #IMPLIED
+                     conkeyref  CDATA     #IMPLIED
+                     props     CDATA     #IMPLIED
+                     platform  CDATA     #IMPLIED
+                     product   CDATA     #IMPLIED
+                     audience  CDATA     #IMPLIED
+                     otherprops  CDATA     #IMPLIED
+                     base      CDATA     #IMPLIED
+                     importance  (default|deprecated|high|low|normal|obsolete|optional|recommended|required|urgent|-dita-use-conref-target)  #IMPLIED
+                     rev       CDATA     #IMPLIED
+                     status    (changed|deleted|new|unchanged|-dita-use-conref-target)  #IMPLIED
+                     translate  (no|yes|-dita-use-conref-target)  #IMPLIED
+                     xml:lang  CDATA     #IMPLIED
+                     dir       (lro|ltr|rlo|rtl|-dita-use-conref-target)  #IMPLIED
+                     outputclass  CDATA     #IMPLIED
+                     xtrc      CDATA     #IMPLIED
+                     xtrf      CDATA     #IMPLIED
+                     class     CDATA     "- topic/p " >
+
+<!ELEMENT CorrectionLine 
+                     (#PCDATA) >
+<!ATTLIST CorrectionLine 
+                     id        ID        #IMPLIED
+                     conref    CDATA     #IMPLIED
+                     conrefend  CDATA     #IMPLIED
+                     conaction  (mark|pushafter|pushbefore|pushreplace|-dita-use-conref-target)  #IMPLIED
+                     conkeyref  CDATA     #IMPLIED
+                     props     CDATA     #IMPLIED
+                     platform  CDATA     #IMPLIED
+                     product   CDATA     #IMPLIED
+                     audience  CDATA     #IMPLIED
+                     otherprops  CDATA     #IMPLIED
+                     base      CDATA     #IMPLIED
+                     importance  (default|deprecated|high|low|normal|obsolete|optional|recommended|required|urgent|-dita-use-conref-target)  #IMPLIED
+                     rev       CDATA     #IMPLIED
+                     status    (changed|deleted|new|unchanged|-dita-use-conref-target)  #IMPLIED
+                     translate  (no|yes|-dita-use-conref-target)  #IMPLIED
+                     xml:lang  CDATA     #IMPLIED
+                     dir       (lro|ltr|rlo|rtl|-dita-use-conref-target)  #IMPLIED
+                     outputclass  CDATA     #IMPLIED
+                     xtrc      CDATA     #IMPLIED
+                     xtrf      CDATA     #IMPLIED
+                     class     CDATA     "- topic/p " >

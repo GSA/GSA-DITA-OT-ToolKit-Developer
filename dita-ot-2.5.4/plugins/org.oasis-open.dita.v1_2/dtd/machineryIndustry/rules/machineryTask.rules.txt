@@ -1,0 +1,214 @@
+fm version is "13.0";
+
+/*
+ADOBE SYSTEMS INCORPORATED
+Copyright 2010 © 2010 Adobe Systems Incorporated
+All Rights Reserved
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying 
+it.If you have received this file from a source other than Adobe, then
+your use, modification, or distribution of it requires the prior written
+permission of Adobe.
+*/
+
+/* machineryIndustry/rules/machineryTask.rules.txt has read/write rules for application 
+DITA_1.2_machineryTask. */
+
+writer external dtd is public "-//OASIS//DTD DITA Machinery Task//EN"
+  "machineryIndustry/dtd/machineryTask.dtd";
+
+writer use proportional widths;
+
+/*Map the dir attribute to direction*/
+attribute "dir" {
+	is fm attribute;
+	is fm property direction;
+}
+
+/* Map the nbsp entity to a non-breaking space. */
+entity "nbsp" is fm char 0x11 ;
+
+/* Cross-references */
+fm element "fm-xref" drop;
+fm element "fm-linktext" drop;
+
+/* Footnotes */
+element "fn" is fm footnote element "fn";
+
+/* Graphic element: image */
+element "image" {
+  is fm graphic element;
+  writer facet default {
+    specify size in pt;
+    }
+  fm property import by reference or copy value is "ref";
+  attribute "href" {
+     is fm attribute "href";
+     is fm property file;
+    }
+  attribute "placement" {
+    is fm attribute "placement";
+    is fm property position;
+    value "inline" is fm property value inline;
+    value "-dita-use-conref-target" is fm property value inline;
+    value "break" is fm property value bottom;
+    }
+  attribute "align" {
+    is fm attribute "align";
+    is fm property alignment;
+    value "left" is fm property value align left;
+    value "right" is fm property value align right;
+    value "center" is fm property value align center;
+    value "side closer to binding" is fm property value align inside;
+    value "side farther from binding" is fm property value align outside;
+    }
+  attribute "height" is fm property height;
+  attribute "height" is fm attribute "height";
+  attribute "width" is fm property width;
+  attribute "width" is fm attribute "width";
+  }
+
+/* Index terms */
+element "indexterm" {
+  is fm marker element;
+  marker text is content;
+  }
+
+/* Line break-respecting text */
+element "lines" {
+  preserve line breaks;
+}
+
+/* Preformatted text */
+element "pre" {
+  preserve line breaks;
+}
+
+/* Simple tables */
+element "simpletable" {
+  is fm table element;
+  attribute "relcolwidth" is fm property column widths;
+}
+
+element "sthead" is fm table heading element;
+fm element "fm-stheadrow" unwrap;
+fm element "fm-stbody" unwrap;
+element "strow" is fm table row element;
+element "stentry" is fm table cell element;
+
+element "table" {
+  /* If table is a container element, use this subrule: */
+  is fm element;
+  /* The rest of the subrules for table are always applicable. */
+  attribute "tocentry" is fm attribute;
+  attribute "frame" {
+    is fm property table border ruling;
+    value "top" is fm property value top;
+    value "bottom" is fm property value bottom;
+    value "topbot" is fm property value top and bottom;
+    value "all" is fm property value all;
+    value "sides" is fm property value sides;
+    value "none" is fm property value none;
+    }
+  attribute "colsep" is fm property column ruling;
+  attribute "rowsep" is fm property row ruling;
+  attribute "orient" is fm attribute;
+  attribute "pgwide" {
+    is fm property page wide;
+    is fm attribute;
+    }
+  }
+
+element "tgroup" {
+  is fm table element;
+  attribute "cols" is fm property columns;
+  attribute "outputclass" {
+    is fm property table format;
+    is fm attribute;
+    }
+  attribute "colsep" is fm property column ruling;
+  attribute "rowsep" is fm property row ruling;
+  attribute "align" is fm attribute;
+  attribute "charoff" is fm attribute;
+  attribute "char" is fm attribute;
+  attribute "colwidth" drop;
+  }
+
+element "colspec" {
+  is fm colspec;
+  attribute "colnum" is fm property column number;
+  attribute "colname" is fm property column name;
+  attribute "align" is fm property cell alignment type;
+  attribute "charoff" is fm property cell alignment offset;
+  attribute "char" is fm property cell alignment character;
+  attribute "colwidth" is fm property column width; 
+  attribute "colsep" is fm property column ruling;
+  attribute "rowsep" is fm property row ruling;
+  }
+
+element "spanspec" {
+  is fm spanspec;
+  attribute "spanname" is fm property span name;
+  attribute "namest" is fm property start column name;
+  attribute "nameend" is fm property end column name;
+  attribute "align" is fm property cell alignment type;
+  attribute "charoff" is fm property cell alignment offset;
+  attribute "char" is fm property cell alignment character;
+  attribute "colsep" is fm property column ruling;
+  attribute "rowsep" is fm property row ruling;
+  }
+
+/* Choice tables */
+element "choicetable" {
+  is fm table element;
+  fm property columns value is "2";
+  attribute "relcolwidth" is fm property column widths;
+  }
+
+element "chhead" is fm table heading element;
+fm element "fm-chheadrow" unwrap;
+element "choptionhd" is fm table cell element;
+element "chdeschd" is fm table cell element;
+fm element "fm-chbody" unwrap;
+element "chrow" is fm table row element;
+element "choption" is fm table cell element;
+element "chdesc" is fm table cell element;
+
+/* Graphic element: hazardsymbol*/
+element "hazardsymbol" {
+  is fm graphic element;
+  writer facet default {
+    specify size in pt;
+    }
+  fm property import by reference or copy value is "ref";
+  attribute "href" {
+     is fm attribute "href";
+     is fm property file;
+    }
+  attribute "placement" {
+    is fm attribute "placement";
+    is fm property position;
+    value "inline" is fm property value inline;
+    value "-dita-use-conref-target" is fm property value inline;
+    value "break" is fm property value bottom;
+    }
+  attribute "align" {
+    is fm attribute "align";
+    is fm property alignment;
+    value "left" is fm property value align left;
+    value "right" is fm property value align right;
+    value "center" is fm property value align center;
+    value "side closer to binding" is fm property value align inside;
+    value "side farther from binding" is fm property value align outside;
+    }
+  attribute "height" is fm property height;
+  attribute "height" is fm attribute "height";
+  attribute "width" is fm property width;
+  attribute "width" is fm attribute "width";
+  }
+
+element "screen" {
+  preserve line breaks;
+  }
+

@@ -1,0 +1,15 @@
+class     CDATA     "- topic/topic” 
+
+It should be 
+
+class     CDATA     "- topic/topic CoverVolume/CoverVolume “ 
+
+Note also the required trailing space in the @class value. The normal way to match on @class is:
+
+contains(@class, ‘ topic/topic ‘)
+
+Note the trailing space at the end of the string.
+
+If the attribute value default doesn’t also have the space then that type of check will fail.
+
+The D4P code uses a custom function that handles this error but a lot of DITA processing, including the base Open Toolkit processing will not handle that case.
