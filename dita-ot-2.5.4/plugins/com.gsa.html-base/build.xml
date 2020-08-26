@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2gsa.html-base">
-
-
-
-  <target name="dita2gsa.html-base">
-    <property name="args.copycss" value="yes"/>
-    <property name="args.css" location="${dita.plugin.com.gsa.html-base.dir}/css/gsa-base.css"/>
-    <property name="generate-debug-attributes" value="false"/><!-- Don't generate @xtrf and @xtrc attributes -->   
-    <antcall target="dita2html5"/>
-  </target>
-
+<project xmlns:dita="http://dita-ot.sourceforge.net"
+       	name="dita2gsa.html-base">
+	<target name="dita2gsa.html-base">
+		<property name="args.copycss"
+        			value="yes"/>
+		<property name="args.css"
+        			location="${dita.plugin.com.gsa.html-base.dir}/css/gsa-base.css"/>
+		<property name="generate-debug-attributes"
+        			value="false"/>
+		<!-- Don't generate @xtrf and @xtrc attributes -->
+		<antcall target="dita2html5"/>
+	</target>
 </project>
